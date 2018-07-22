@@ -4,14 +4,20 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core testlib
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Demo
+TARGET = DemoTest
 TEMPLATE = app
 
-include(Demo.pri)
-SOURCES += main.cpp
+include(../Demo/Demo.pri)
 
+SOURCES += \
+    cdirectortest.cpp \
+    csingertest.cpp \
+    main.cpp
 
+HEADERS += \
+    cdirectortest.h \
+    csingertest.h
